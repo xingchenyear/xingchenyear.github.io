@@ -5,17 +5,17 @@
   
   <title>JavaIO流RandomAccessFile | 待你如初见</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="RandomAccessFile12java提供的对文件内容的访问，即可以读文件，也可以写文件支持随机访问文件可以访问文件任意位置 java的文件模型1在硬盘上的文件时 byte byte byte存储的，是数据的集合 打开文件123两种模式：“rw”（读写），“r”（只读）RandomAccessFile raf = new RandomAccessFile(File,&quot;rw&quot;)文件指针，打开文">
+  <meta name="description" content="RandomAccessFile12java提供的对文件内容的访问，即可以读文件，也可以写文件支持随机访问文件可以访问文件任意位置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaIO流RandomAccessFile">
 <meta property="og:url" content="http://win5.top/2018/01/18/JavaIO流RandomAccessFile/index.html">
 <meta property="og:site_name" content="待你如初见">
-<meta property="og:description" content="RandomAccessFile12java提供的对文件内容的访问，即可以读文件，也可以写文件支持随机访问文件可以访问文件任意位置 java的文件模型1在硬盘上的文件时 byte byte byte存储的，是数据的集合 打开文件123两种模式：“rw”（读写），“r”（只读）RandomAccessFile raf = new RandomAccessFile(File,&quot;rw&quot;)文件指针，打开文">
+<meta property="og:description" content="RandomAccessFile12java提供的对文件内容的访问，即可以读文件，也可以写文件支持随机访问文件可以访问文件任意位置">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-18T09:11:45.165Z">
+<meta property="og:updated_time" content="2018-01-18T10:49:26.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaIO流RandomAccessFile">
-<meta name="twitter:description" content="RandomAccessFile12java提供的对文件内容的访问，即可以读文件，也可以写文件支持随机访问文件可以访问文件任意位置 java的文件模型1在硬盘上的文件时 byte byte byte存储的，是数据的集合 打开文件123两种模式：“rw”（读写），“r”（只读）RandomAccessFile raf = new RandomAccessFile(File,&quot;rw&quot;)文件指针，打开文">
+<meta name="twitter:description" content="RandomAccessFile12java提供的对文件内容的访问，即可以读文件，也可以写文件支持随机访问文件可以访问文件任意位置">
   
     <link rel="alternative" href="/atom.xml" title="待你如初见" type="application/atom+xml">
   
@@ -268,6 +268,7 @@
       
           
         <h3 id="RandomAccessFile"><a href="#RandomAccessFile" class="headerlink" title="RandomAccessFile"></a>RandomAccessFile</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java提供的对文件内容的访问，即可以读文件，也可以写文件</span><br><span class="line">支持随机访问文件可以访问文件任意位置</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="java的文件模型"><a href="#java的文件模型" class="headerlink" title="java的文件模型"></a>java的文件模型</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在硬盘上的文件时 byte byte byte存储的，是数据的集合</span><br></pre></td></tr></table></figure>
 <h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">两种模式：“rw”（读写），“r”（只读）</span><br><span class="line">RandomAccessFile raf = new RandomAccessFile(File,<span class="string">"rw"</span>)</span><br><span class="line">文件指针，打开文件时指针在开头 pointer = 0</span><br></pre></td></tr></table></figure>
 <h3 id="写方法："><a href="#写方法：" class="headerlink" title="写方法："></a>写方法：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">raf.write(int)---&gt;只写一个字节（后8位），同时指针指向下一个位置，准备再次写入</span><br></pre></td></tr></table></figure>
@@ -333,7 +334,7 @@
         <p><span>本文标题:</span><a href="/2018/01/18/JavaIO流RandomAccessFile/">JavaIO流RandomAccessFile</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 win5.top 的个人博客">win5.top</a></p>
         <p><span>发布时间:</span>2018年01月18日 - 14时23分</p>
-        <p><span>最后更新:</span>2018年01月18日 - 17时11分</p>
+        <p><span>最后更新:</span>2018年01月18日 - 18时49分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/01/18/JavaIO流RandomAccessFile/" title="JavaIO流RandomAccessFile">http://win5.top/2018/01/18/JavaIO流RandomAccessFile/</a>
             <span class="copy-path" data-clipboard-text="原文: http://win5.top/2018/01/18/JavaIO流RandomAccessFile/　　作者: win5.top" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
