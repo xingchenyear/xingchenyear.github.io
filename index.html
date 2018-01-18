@@ -69,6 +69,60 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JavaIO流RandomAccessFile" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/18/JavaIO流RandomAccessFile/" class="article-date">
+  <time datetime="2018-01-18T06:23:39.000Z" itemprop="datePublished">2018-01-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/18/JavaIO流RandomAccessFile/">JavaIO流RandomAccessFile</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="RandomAccessFile"><a href="#RandomAccessFile" class="headerlink" title="RandomAccessFile"></a>RandomAccessFile</h3><blockquote>
+<p>java提供的对文件内容的访问，即可以读文件，也可以写文件<br>支持随机访问文件可以访问文件任意位置</p>
+</blockquote>
+<h3 id="java的文件模型"><a href="#java的文件模型" class="headerlink" title="java的文件模型"></a>java的文件模型</h3><blockquote>
+<p> 在硬盘上的文件时 byte byte byte存储的，是数据的集合</p>
+</blockquote>
+<h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><blockquote>
+<p>两种模式：“rw”（读写），“r”（只读）<br>RandomAccessFile raf = new RandomAccessFile(File,”rw”)<br>文件指针，打开文件时指针在开头 pointer = 0</p>
+</blockquote>
+<h3 id="写方法："><a href="#写方法：" class="headerlink" title="写方法："></a>写方法：</h3><blockquote>
+<p>raf.write(int)—&gt;只写一个字节（后8位），同时指针指向下一个位置，准备再次写入</p>
+</blockquote>
+<h3 id="读方法："><a href="#读方法：" class="headerlink" title="读方法："></a>读方法：</h3><blockquote>
+<p>int b = raf.read()—&gt;读一个字节</p>
+</blockquote>
+<h3 id="注意关闭流"><a href="#注意关闭流" class="headerlink" title="注意关闭流"></a>注意关闭流</h3><blockquote>
+<p>raf.close()</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://win5.top/2018/01/18/JavaIO流RandomAccessFile/" data-id="cjck4i2kc0001jqs4g5erfqwz" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JavaIO流File类" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/01/17/JavaIO流File类/" class="article-date">
@@ -97,7 +151,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://win5.top/2018/01/17/JavaIO流File类/" data-id="cjck333x500000ms4zowcl7w5" class="article-share-link">Teilen</a>
+      <a data-url="http://win5.top/2018/01/17/JavaIO流File类/" data-id="cjck4i2jo0000jqs4jmku3nxc" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -142,7 +196,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://win5.top/2018/01/17/hello-world/" data-id="cjck333xu00010ms4ga7rfahr" class="article-share-link">Teilen</a>
+      <a data-url="http://win5.top/2018/01/17/hello-world/" data-id="cjck4i2l70002jqs4vf73axtm" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -181,6 +235,10 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/01/18/JavaIO流RandomAccessFile/">JavaIO流RandomAccessFile</a>
+          </li>
         
           <li>
             <a href="/2018/01/17/JavaIO流File类/">JavaIO流File类</a>
