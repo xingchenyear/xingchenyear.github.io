@@ -264,10 +264,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h2><h3 id="编码问题"><a href="#编码问题" class="headerlink" title="编码问题"></a>编码问题</h3><h3 id="认识文本和文本文件"><a href="#认识文本和文本文件" class="headerlink" title="认识文本和文本文件"></a>认识文本和文本文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java的文本(char)是16位无符号整数，是字符的unicode编码（双字节编码)</span><br><span class="line">文件是byte byte byte ...的数据序列</span><br><span class="line">文本文件是文本(char)序列按照某种编码方案(utf-8,utf-16be,gbk)序列化为byte的存储结果</span><br></pre></td></tr></table></figure>
-<h3 id="字符流-Reader-Writer-—-gt-操作的是文本文本文件"><a href="#字符流-Reader-Writer-—-gt-操作的是文本文本文件" class="headerlink" title="字符流(Reader Writer)—-&gt;操作的是文本文本文件"></a>字符流(Reader Writer)—-&gt;操作的是文本文本文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">字符的处理，一次处理一个字符</span><br><span class="line">字符的底层任然是基本的字节序列</span><br><span class="line">字符流的基本实现</span><br><span class="line">   InputStreamReader   完成byte流解析为char流,按照编码解析</span><br><span class="line">   OutputStreamWriter  提供char流到byte流，按照编码处理  </span><br><span class="line">   FileReader/FileWriter</span><br></pre></td></tr></table></figure>
-<h3 id="字符流的过滤器"><a href="#字符流的过滤器" class="headerlink" title="字符流的过滤器"></a>字符流的过滤器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">BufferedReader   ----&gt;readLine 一次读一行</span><br><span class="line">BufferedWriter/PrintWriter   ----&gt;写一行</span><br></pre></td></tr></table></figure>
-
+              <h2 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h2><h3 id="认识文本和文本文件"><a href="#认识文本和文本文件" class="headerlink" title="认识文本和文本文件"></a>认识文本和文本文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java的文本(char)是16位无符号整数，是字符的unicode编码（双字节编码)</span><br><span class="line">文件是byte byte byte ...的数据序列</span><br><span class="line">文本文件是文本(char)序列按照某种编码方案(utf-8,utf-16be,gbk)序列化为byte的存储结果</span><br></pre></td></tr></table></figure>
+          
       
       
     </div>
@@ -277,6 +275,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a  href="/2018/01/19/JavaIO流输入输出流-字符流/#more">大航海 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
