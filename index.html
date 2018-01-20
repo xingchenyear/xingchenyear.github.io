@@ -237,6 +237,74 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-对象序列化与反序列化" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/01/20/对象序列化与反序列化/" class="article-date">
+      <time datetime="2018-01-20T08:58:02.000Z" itemprop="datePublished">2018-01-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/20/对象序列化与反序列化/">对象序列化与反序列化</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="对象的序列化，反序列化"><a href="#对象的序列化，反序列化" class="headerlink" title="对象的序列化，反序列化"></a>对象的序列化，反序列化</h2><ol>
+<li>对象序列化，就是将Object转换成byte序列，反之叫对象的反序列化 </li>
+<li>序列化流(ObjectOutputStream),是过滤流—-writeObject<br>反序列化流(ObjectInputStream)—readObject</li>
+<li>序列化接口(Serializable)<br>对象必须实现序列化接口 ，才能进行序列化，否则将出现异常<br>这个接口，没有任何方法，只是一个标准<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) throws Exception&#123;</span><br><span class="line">		String file = <span class="string">"demo/obj.dat"</span>;</span><br><span class="line">		//1.对象的序列化</span><br><span class="line">		/*ObjectOutputStream oos = new ObjectOutputStream(</span><br><span class="line">				new FileOutputStream(file));</span><br><span class="line">		Student stu = new Student(<span class="string">"10001"</span>, <span class="string">"张三"</span>, 20);</span><br><span class="line">		oos.writeObject(stu);</span><br><span class="line">		oos.flush();</span><br><span class="line">		oos.close();*/</span><br><span class="line">		//2.对象反序列化</span><br><span class="line">		ObjectInputStream ois = new ObjectInputStream(</span><br><span class="line">				new FileInputStream(file));</span><br><span class="line">		Student stu = (Student)ois.readObject();</span><br><span class="line">		System.out.println(stu);</span><br><span class="line">		ois.close();</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="transient关键字"><a href="#transient关键字" class="headerlink" title="transient关键字"></a>transient关键字</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//手动序列化</span><br><span class="line">  private void writeObject(java.io.ObjectOutputStream s)</span><br><span class="line">	        throws java.io.IOException</span><br><span class="line">//手动反序列化</span><br><span class="line">  private void readObject(java.io.ObjectInputStream s)</span><br><span class="line">	        throws java.io.IOException, ClassNotFoundException		        </span><br><span class="line">  //分析ArrayList源码中序列化和反序列化的问题</span><br></pre></td></tr></table></figure>
+<h3 id="序列化中-子类和父类构造函数的调用问题"><a href="#序列化中-子类和父类构造函数的调用问题" class="headerlink" title="序列化中 子类和父类构造函数的调用问题"></a>序列化中 子类和父类构造函数的调用问题</h3><p>可以提高性能有效数据进行序列化无效不序列化</p>
+<h3 id="序列化中-子类和父类构造函数的调用问题-1"><a href="#序列化中-子类和父类构造函数的调用问题-1" class="headerlink" title="序列化中 子类和父类构造函数的调用问题"></a>序列化中 子类和父类构造函数的调用问题</h3><ul>
+<li>对子类对象进行反序列化操作时，</li>
+<li>如果其父类没有实现序列化接口</li>
+<li>那么其父类的构造函数会被调用</li>
+<li>一个类实现了序列化接口，那么其子类都可以进行序列化</li>
+</ul>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-JavaIO流输入输出流-字符流" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
