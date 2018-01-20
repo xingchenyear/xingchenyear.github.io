@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>JavaIO流输入输出流-字符流 | 待你如初见</title>
+  <title>Hello World | 待你如初见</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="字节字符转换流认识文本和文本文件123java的文本(char)是16位无符号整数，是字符的unicode编码（双字节编码)文件是byte byte byte ...的数据序列文本文件是文本(char)序列按照某种编码方案(utf-8,utf-16be,gbk)序列化为byte的存储结果">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaIO流输入输出流-字符流">
-<meta property="og:url" content="http://win5.top/2018/01/19/JavaIO流输入输出流-字符流/index.html">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://win5.top/2018/01/20/hello-world/index.html">
 <meta property="og:site_name" content="待你如初见">
-<meta property="og:description" content="字节字符转换流认识文本和文本文件123java的文本(char)是16位无符号整数，是字符的unicode编码（双字节编码)文件是byte byte byte ...的数据序列文本文件是文本(char)序列按照某种编码方案(utf-8,utf-16be,gbk)序列化为byte的存储结果">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-20T08:45:59.500Z">
+<meta property="og:updated_time" content="2018-01-20T10:04:06.460Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaIO流输入输出流-字符流">
-<meta name="twitter:description" content="字节字符转换流认识文本和文本文件123java的文本(char)是16位无符号整数，是字符的unicode编码（双字节编码)文件是byte byte byte ...的数据序列文本文件是文本(char)序列按照某种编码方案(utf-8,utf-16be,gbk)序列化为byte的存储结果">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
   
     <link rel="alternative" href="/atom.xml" title="待你如初见" type="application/atom+xml">
   
@@ -233,11 +233,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-JavaIO流输入输出流-字符流" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/01/19/JavaIO流输入输出流-字符流/" class="article-date">
-      <time datetime="2018-01-19T15:18:24.000Z" itemprop="datePublished">2018-01-19</time>
+      <a href="/2018/01/20/hello-world/" class="article-date">
+      <time datetime="2018-01-20T10:04:06.460Z" itemprop="datePublished">2018-01-20</time>
 </a>
     </div>
   
@@ -250,7 +250,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JavaIO流输入输出流-字符流
+      Hello World
     </h1>
   
 
@@ -267,13 +267,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="字节字符转换流"><a href="#字节字符转换流" class="headerlink" title="字节字符转换流"></a>字节字符转换流</h2><h3 id="认识文本和文本文件"><a href="#认识文本和文本文件" class="headerlink" title="认识文本和文本文件"></a>认识文本和文本文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java的文本(char)是16位无符号整数，是字符的unicode编码（双字节编码)</span><br><span class="line">文件是byte byte byte ...的数据序列</span><br><span class="line">文本文件是文本(char)序列按照某种编码方案(utf-8,utf-16be,gbk)序列化为byte的存储结果</span><br></pre></td></tr></table></figure>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <a id="more"></a>
-<h3 id="字符流-Reader-Writer-—-gt-操作的是文本文本文件"><a href="#字符流-Reader-Writer-—-gt-操作的是文本文本文件" class="headerlink" title="字符流(Reader Writer)—-&gt;操作的是文本文本文件"></a>字符流(Reader Writer)—-&gt;操作的是文本文本文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">字符的处理，一次处理一个字符</span><br><span class="line">字符的底层任然是基本的字节序列</span><br><span class="line">字符流的基本实现</span><br><span class="line">   InputStreamReader   完成byte流解析为char流,按照编码解析</span><br><span class="line">   OutputStreamWriter  提供char流到byte流，按照编码处理  </span><br><span class="line">   FileReader/FileWriter</span><br></pre></td></tr></table></figure>
-<h3 id="字符流的过滤器"><a href="#字符流的过滤器" class="headerlink" title="字符流的过滤器"></a>字符流的过滤器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  //BufferedReader   ----&gt;readLine 一次读一行</span><br><span class="line">  //BufferedWriter/PrintWriter   ----&gt;写一行    </span><br><span class="line">public static void brAndBw() throws IOException &#123;</span><br><span class="line">       BufferedReader br=null;</span><br><span class="line">       BufferedWriter bw=null;</span><br><span class="line">       try &#123;</span><br><span class="line">           br = new BufferedReader(new InputStreamReader(new FileInputStream(<span class="string">"E:\\VSC.dat"</span>)));</span><br><span class="line">           bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(<span class="string">"E:\\javaio\\VSC.dat"</span>)));</span><br><span class="line">           String line;</span><br><span class="line">           <span class="keyword">while</span> ((line=br.readLine())!= null)&#123;</span><br><span class="line">               System.out.println(line);</span><br><span class="line">               bw.write(line);//无换行</span><br><span class="line">               //bw.newLine();//添加换行</span><br><span class="line">           &#125;</span><br><span class="line">       &#125; catch (IOException e) &#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">       &#125;finally &#123;</span><br><span class="line">           bw.close();</span><br><span class="line">           br.close();</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="读文件示例"><a href="#读文件示例" class="headerlink" title="读文件示例"></a>读文件示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) throws IOException &#123;</span><br><span class="line">       FileInputStream fis=null;</span><br><span class="line">       InputStreamReader isr=null;</span><br><span class="line">       try &#123;</span><br><span class="line">           fis = new FileInputStream(<span class="string">"G://path.txt"</span>);</span><br><span class="line">           isr = new InputStreamReader(fis,<span class="string">"utf-8"</span>);//默认为项目编码可指定</span><br><span class="line">           int c;</span><br><span class="line">           <span class="keyword">while</span> ((c=isr.read())!=-1)&#123;</span><br><span class="line">               System.out.print((char) c);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125; catch (IOException e) &#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">       &#125;finally &#123;</span><br><span class="line">           isr.close();</span><br><span class="line">           fis.close();</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="文件复制示例"><a href="#文件复制示例" class="headerlink" title="文件复制示例"></a>文件复制示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) throws IOException &#123;</span><br><span class="line">        FileInputStream fis=null;</span><br><span class="line">        InputStreamReader isr=null;</span><br><span class="line">        FileOutputStream fos=null;</span><br><span class="line">        OutputStreamWriter osw=null;</span><br><span class="line">        try &#123;</span><br><span class="line">            fis = new FileInputStream(<span class="string">"G://path.txt"</span>);</span><br><span class="line">            isr = new InputStreamReader(fis,<span class="string">"utf-8"</span>);//默认为项目编码可指定</span><br><span class="line">            fos = new FileOutputStream(<span class="string">"G://path2.txt"</span>);</span><br><span class="line">            osw = new OutputStreamWriter(fos);</span><br><span class="line">            int c;</span><br><span class="line">            char[] a = new char[1024];</span><br><span class="line">            <span class="keyword">while</span> ((c = isr.read(a,0,a.length)) != -1)&#123;</span><br><span class="line">                String s = new String(a,0,c);</span><br><span class="line">                System.out.println(s);</span><br><span class="line">                osw.write(a,0,c);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;finally &#123;</span><br><span class="line">            fis.close();</span><br><span class="line">            osw.close();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="字节字符读写流"><a href="#字节字符读写流" class="headerlink" title="字节字符读写流"></a>字节字符读写流</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public static void fileCopyByFrAndFw() throws IOException &#123;</span><br><span class="line">        FileWriter fw = null;</span><br><span class="line">        FileReader fr = null;</span><br><span class="line">        int c;</span><br><span class="line">        char[] chars = new char[1024];</span><br><span class="line">        try &#123;</span><br><span class="line">            fr = new FileReader(<span class="string">"e://javaio//text.dat"</span>);</span><br><span class="line">            fw = new FileWriter(<span class="string">"e://text.dat"</span>);//FileWriter(<span class="string">"e://text.dat"</span>,<span class="literal">true</span>)追加操作</span><br><span class="line">            <span class="keyword">while</span> ((c = fr.read(chars,0,chars.length))!=-1)&#123;</span><br><span class="line">                System.out.println(chars);</span><br><span class="line">                fw.write(chars,0,c);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;finally &#123;</span><br><span class="line">            fw.close();</span><br><span class="line">            fr.close();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
       
       
@@ -329,13 +332,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/01/19/JavaIO流输入输出流-字符流/">JavaIO流输入输出流-字符流</a></p>
+        <p><span>本文标题:</span><a href="/2018/01/20/hello-world/">Hello World</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 win5.top 的个人博客">win5.top</a></p>
-        <p><span>发布时间:</span>2018年01月19日 - 23时18分</p>
-        <p><span>最后更新:</span>2018年01月20日 - 16时45分</p>
+        <p><span>发布时间:</span>2018年01月20日 - 18时04分</p>
+        <p><span>最后更新:</span>2018年01月20日 - 18时04分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/01/19/JavaIO流输入输出流-字符流/" title="JavaIO流输入输出流-字符流">http://win5.top/2018/01/19/JavaIO流输入输出流-字符流/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://win5.top/2018/01/19/JavaIO流输入输出流-字符流/　　作者: win5.top" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/01/20/hello-world/" title="Hello World">http://win5.top/2018/01/20/hello-world/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://win5.top/2018/01/20/hello-world/　　作者: win5.top" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -348,18 +351,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/01/20/对象序列化与反序列化/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          对象序列化与反序列化
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/01/18/JavaIO流输入输出流-字节流/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaIO流输入输出流-字节流</div>
+    <a href="/2018/01/20/对象序列化与反序列化/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">对象序列化与反序列化</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -370,7 +364,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#字节字符转换流"><span class="toc-number">1.</span> <span class="toc-text">字节字符转换流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#认识文本和文本文件"><span class="toc-number">1.1.</span> <span class="toc-text">认识文本和文本文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符流-Reader-Writer-—-gt-操作的是文本文本文件"><span class="toc-number">1.2.</span> <span class="toc-text">字符流(Reader Writer)—-&gt;操作的是文本文本文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符流的过滤器"><span class="toc-number">1.3.</span> <span class="toc-text">字符流的过滤器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#读文件示例"><span class="toc-number">1.4.</span> <span class="toc-text">读文件示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件复制示例"><span class="toc-number">1.5.</span> <span class="toc-text">文件复制示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字节字符读写流"><span class="toc-number">2.</span> <span class="toc-text">字节字符读写流</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -436,13 +430,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/01/20/对象序列化与反序列化/" title="上一篇: 对象序列化与反序列化">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2018/01/18/JavaIO流输入输出流-字节流/" title="下一篇: JavaIO流输入输出流-字节流">
+            <a href="/2018/01/20/对象序列化与反序列化/" title="下一篇: 对象序列化与反序列化">
                 <i class="fa fa-angle-right"></i>
             </a>
         
