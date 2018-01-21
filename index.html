@@ -237,6 +237,69 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Java反射Class类与类动态载" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/01/21/Java反射Class类与类动态载/" class="article-date">
+      <time datetime="2018-01-21T13:28:49.000Z" itemprop="datePublished">2018-01-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/21/Java反射Class类与类动态载/">Java反射Class类与类动态载</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Class类，类类型的概念"><a href="#Class类，类类型的概念" class="headerlink" title="Class类，类类型的概念"></a>Class类，类类型的概念</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在面向对象的世界中，万事万物皆对象。Java语言中，静态的成员，</span><br><span class="line">类是对象，类是Java.lang.class的实例对象</span><br></pre></td></tr></table></figure>
+<h3 id="如何表示"><a href="#如何表示" class="headerlink" title="如何表示"></a>如何表示</h3><p>三种表示方式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//1.实例在告诉我们任何一个类都有一个隐含的静态成员变量class</span><br><span class="line"> Class c1 = new Foo();</span><br><span class="line"> //2.已知该类的对象通过getClass方法</span><br><span class="line">Class c2 = Foo.getClass();</span><br><span class="line">//官方 c1，c2表示了Foo类的类类型（Class Type）</span><br><span class="line">//万事万物皆对象，类也是对象，是Class的对象 这个对象我们称为类类型</span><br><span class="line">// 个人理解类类型意思是 类的类型 </span><br><span class="line">//c1 or c2 都是Foo的类类型 但一个类只可能是Class类的一个实例对象</span><br><span class="line">System.out.print(c1==c2)</span><br><span class="line">//3.通过类名字实例化</span><br><span class="line">Class c3 = Class.forName(<span class="string">"com.xc.Foo"</span>);//填全称 会有异常</span><br><span class="line">//通常可以通过类类型创建该类的实例对象</span><br><span class="line">Foo f1 = (Foo)c1.newInstance //需要做强制类型转换 需要有无参构造方法 会有异常</span><br></pre></td></tr></table></figure></p>
+<h2 id="Class动态加载类的方法"><a href="#Class动态加载类的方法" class="headerlink" title="Class动态加载类的方法"></a>Class动态加载类的方法</h2><blockquote>
+<p>通过Class.forName(“类的全称”)</p>
+<h2 id="类的加载方式（2种）"><a href="#类的加载方式（2种）" class="headerlink" title="类的加载方式（2种）"></a>类的加载方式（2种）</h2><h3 id="1、静态加载类"><a href="#1、静态加载类" class="headerlink" title="1、静态加载类"></a>1、静态加载类</h3><p>编译时，加载的类是静态加载类。<br>Foo foo = new Foo();<br>创建对象是静态加载类，编译时就要加载所有要用到的类，如果其中 1 个类有问题，就无法通过编译。解决该问题，可以使用动态加载类。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class office</span><br><span class="line">&#123;</span><br><span class="line">    pubic static void main(String[] args)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="string">"wrod"</span>.equals(args[0]))&#123;</span><br><span class="line">            Word word = new Word();</span><br><span class="line">            word.start();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(<span class="string">"Excel"</span>.equals(args[0]))&#123;</span><br><span class="line">            Excel excel = new Excel();</span><br><span class="line">            excel.start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class word </span><br><span class="line">&#123;</span><br><span class="line">    public void <span class="function"><span class="title">start</span></span>()&#123;</span><br><span class="line">        System.out.print(<span class="string">"word..start.."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="2、动态加载类"><a href="#2、动态加载类" class="headerlink" title="2、动态加载类"></a>2、动态加载类</h3><blockquote>
+<p>运行时，加载的类是动态加载类<br>Class.forName(“com.reflect.Foo”);<br>编译时不检查用到的类是否存在，运行时再检查。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class officeBetter</span><br><span class="line">&#123;</span><br><span class="line">    pubic static void main(String[] args)&#123;</span><br><span class="line">       try&#123;</span><br><span class="line">        //动态加载</span><br><span class="line">        Class c = Class.forNname(args[0]);</span><br><span class="line">        office o = (office)c.newInstance();</span><br><span class="line">       &#125;catch(Expction e)&#123;  </span><br><span class="line">           e.printStackTrace();</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">interface office</span><br><span class="line">&#123;</span><br><span class="line">    void start();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class word implements office</span><br><span class="line">&#123;</span><br><span class="line">    public void <span class="function"><span class="title">start</span></span>()&#123;</span><br><span class="line">        System.out.print(<span class="string">"word..start.."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
