@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>JavaIO流RandomAccessFile | 待你如初见</title>
+  <title>JavaSocket应用 | 待你如初见</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="RandomAccessFile12java提供的对文件内容的访问，即可以读文件，也可以写文件支持随机访问文件可以访问文件任意位置">
+  <meta name="description" content="InetAdress类 InetAdress类：没有构造方法，不能new一个对象InetAddress类用于标示网络上的硬件资源，表示互联网协议（IP)地址获取本机的InetAddress实例  12345678910111213141516public static void main(String[] args) throws UnknownHostException &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaIO流RandomAccessFile">
-<meta property="og:url" content="http://win5.top/2018/01/18/JavaIO流RandomAccessFile/index.html">
+<meta property="og:title" content="JavaSocket应用">
+<meta property="og:url" content="http://win5.top/2018/01/23/JavaSocket应用/index.html">
 <meta property="og:site_name" content="待你如初见">
-<meta property="og:description" content="RandomAccessFile12java提供的对文件内容的访问，即可以读文件，也可以写文件支持随机访问文件可以访问文件任意位置">
+<meta property="og:description" content="InetAdress类 InetAdress类：没有构造方法，不能new一个对象InetAddress类用于标示网络上的硬件资源，表示互联网协议（IP)地址获取本机的InetAddress实例  12345678910111213141516public static void main(String[] args) throws UnknownHostException &amp;#123;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-18T10:49:26.559Z">
+<meta property="og:updated_time" content="2018-01-24T04:22:30.501Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaIO流RandomAccessFile">
-<meta name="twitter:description" content="RandomAccessFile12java提供的对文件内容的访问，即可以读文件，也可以写文件支持随机访问文件可以访问文件任意位置">
+<meta name="twitter:title" content="JavaSocket应用">
+<meta name="twitter:description" content="InetAdress类 InetAdress类：没有构造方法，不能new一个对象InetAddress类用于标示网络上的硬件资源，表示互联网协议（IP)地址获取本机的InetAddress实例  12345678910111213141516public static void main(String[] args) throws UnknownHostException &amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="待你如初见" type="application/atom+xml">
   
@@ -233,11 +233,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-JavaIO流RandomAccessFile" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JavaSocket应用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/01/18/JavaIO流RandomAccessFile/" class="article-date">
-      <time datetime="2018-01-18T06:23:39.000Z" itemprop="datePublished">2018-01-18</time>
+      <a href="/2018/01/23/JavaSocket应用/" class="article-date">
+      <time datetime="2018-01-23T14:50:50.000Z" itemprop="datePublished">2018-01-23</time>
 </a>
     </div>
   
@@ -250,7 +250,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JavaIO流RandomAccessFile
+      JavaSocket应用
     </h1>
   
 
@@ -267,15 +267,19 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="RandomAccessFile"><a href="#RandomAccessFile" class="headerlink" title="RandomAccessFile"></a>RandomAccessFile</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java提供的对文件内容的访问，即可以读文件，也可以写文件</span><br><span class="line">支持随机访问文件可以访问文件任意位置</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="java的文件模型"><a href="#java的文件模型" class="headerlink" title="java的文件模型"></a>java的文件模型</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在硬盘上的文件时 byte byte byte存储的，是数据的集合</span><br></pre></td></tr></table></figure>
-<h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">两种模式：“rw”（读写），“r”（只读）</span><br><span class="line">RandomAccessFile raf = new RandomAccessFile(File,<span class="string">"rw"</span>)</span><br><span class="line">文件指针，打开文件时指针在开头 pointer = 0</span><br></pre></td></tr></table></figure>
-<h3 id="写方法："><a href="#写方法：" class="headerlink" title="写方法："></a>写方法：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">raf.write(int)---&gt;只写一个字节（后8位），同时指针指向下一个位置，准备再次写入</span><br></pre></td></tr></table></figure>
-<h3 id="读方法："><a href="#读方法：" class="headerlink" title="读方法："></a>读方法：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int b = raf.read()---&gt;读一个字节</span><br></pre></td></tr></table></figure>
-<h3 id="注意关闭流"><a href="#注意关闭流" class="headerlink" title="注意关闭流"></a>注意关闭流</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">raf.close()</span><br></pre></td></tr></table></figure>
-<h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ getFilePointer() 获取当前指针所在位置</span><br><span class="line">$ write() 向文件写入byte</span><br><span class="line">$ writeInt() 向文件写入int</span><br><span class="line">$ length() 文件长度</span><br><span class="line">$ <span class="built_in">read</span>() 读取文件内容</span><br><span class="line">$ seek() 移动指针位置第几位</span><br></pre></td></tr></table></figure>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">File demofile = new File(<span class="string">"E://javaio"</span>);</span><br><span class="line">       <span class="keyword">if</span>(!demofile.exists())&#123;</span><br><span class="line">           demofile.mkdir();</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       File file = new File(demofile,<span class="string">"text.dat"</span>);</span><br><span class="line">       <span class="keyword">if</span> (!file.exists())&#123;</span><br><span class="line">           file.createNewFile();</span><br><span class="line">       &#125;</span><br><span class="line">       RandomAccessFile randomAccessFile = new RandomAccessFile(file,<span class="string">"rw"</span>);</span><br><span class="line">       System.out.println(randomAccessFile.getFilePointer());</span><br><span class="line">       randomAccessFile.write(<span class="string">'A'</span>);</span><br><span class="line">       System.out.println(randomAccessFile.getFilePointer());</span><br><span class="line">       randomAccessFile.write(<span class="string">'B'</span>);</span><br><span class="line">       int i =0x7fffffff;</span><br><span class="line">       System.out.println(randomAccessFile.getFilePointer());</span><br><span class="line">       randomAccessFile.write(i&gt;&gt;&gt;24);</span><br><span class="line">       randomAccessFile.write(i&gt;&gt;&gt;16);</span><br><span class="line">       randomAccessFile.write(i&gt;&gt;&gt;8);</span><br><span class="line">       randomAccessFile.write(i);</span><br><span class="line">       System.out.println(randomAccessFile.getFilePointer());</span><br><span class="line"></span><br><span class="line">       randomAccessFile.seek(0);</span><br><span class="line">       byte[] buf = new byte[(int)randomAccessFile.length()];</span><br><span class="line">       randomAccessFile.read(buf);</span><br><span class="line">       System.out.println(Arrays.toString(buf));</span><br><span class="line"></span><br><span class="line">       randomAccessFile.close();</span><br></pre></td></tr></table></figure>
+        <h2 id="InetAdress类"><a href="#InetAdress类" class="headerlink" title="InetAdress类"></a>InetAdress类</h2><blockquote>
+<p>InetAdress类：没有构造方法，不能new一个对象<br>InetAddress类用于标示网络上的硬件资源，表示互联网协议（IP)地址<br>获取本机的InetAddress实例</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) throws UnknownHostException &#123;</span><br><span class="line"></span><br><span class="line">        InetAddress ia = InetAddress.getLocalHost();</span><br><span class="line">        System.out.println(<span class="string">"本机地址"</span>+ia.getHostAddress());</span><br><span class="line">        System.out.println(<span class="string">"本机名"</span>+ia.getHostName());</span><br><span class="line">        System.out.println(ia.getCanonicalHostName());</span><br><span class="line">        byte[] ads = ia.getAddress();</span><br><span class="line">        System.out.println(<span class="string">"本机IP"</span>+ Arrays.toString(ads));</span><br><span class="line">        System.out.println(ia);</span><br><span class="line"></span><br><span class="line">        //InetAddress ia1 = InetAddress.getByName(<span class="string">"2013-20161213BF"</span>);</span><br><span class="line">        InetAddress ia1 = InetAddress.getByName(<span class="string">"192.168.1.139"</span>);</span><br><span class="line">        System.out.println(<span class="string">"本机地址"</span>+ia1.getHostAddress());</span><br><span class="line">        System.out.println(<span class="string">"本机名"</span>+ia1.getHostName());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="URL的应用"><a href="#URL的应用" class="headerlink" title="URL的应用"></a>URL的应用</h2><blockquote>
+<ol>
+<li>URL (Uniform Resource Locator) 统一资源定位符，表示Internet上某一资源的地址</li>
+<li>URL由两部分组成：协议名称和资源名称，中间用冒号隔开</li>
+<li>在Java.net包中，提供URL类中来表示URL</li>
+</ol>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            //创建实例</span><br><span class="line">            URL imooc = new URL(<span class="string">"Http://www.imooc.com"</span>);</span><br><span class="line">            //?表示传递的参数 <span class="comment">#后面表示锚点</span></span><br><span class="line">            URL url = new URL(imooc,<span class="string">"/index.html?username=tom#test"</span>);</span><br><span class="line">            System.out.println(<span class="string">"协议"</span>+url.getProtocol());</span><br><span class="line">            System.out.println(<span class="string">"主机地址"</span>+url.getHost());</span><br><span class="line">            //如果未指定端口号，则使用默认端口号，此时getPost()方法返回值为-1</span><br><span class="line">            System.out.println(<span class="string">"端口"</span>+url.getPort());</span><br><span class="line">            System.out.println(<span class="string">"文件路径"</span>+url.getPath());</span><br><span class="line">            System.out.println(<span class="string">"文件名"</span>+url.getFile());</span><br><span class="line">            System.out.println(<span class="string">"相对路径"</span>+url.getRef());</span><br><span class="line">            System.out.println(<span class="string">"传入字符串"</span>+url.getQuery());</span><br><span class="line">        &#125; catch (MalformedURLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用URL读取页面内容"><a href="#使用URL读取页面内容" class="headerlink" title="使用URL读取页面内容"></a>使用URL读取页面内容</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            //创建实例</span><br><span class="line">            URL imooc = new URL(<span class="string">"Http://www.baidu.com"</span>);</span><br><span class="line">            //通过URL来获取输入流</span><br><span class="line">            InputStream is = imooc.openStream();</span><br><span class="line">            //把字节输入流转化为字符输入流，制定字符编码</span><br><span class="line">            InputStreamReader isr = new InputStreamReader(is,<span class="string">"utf-8"</span>);</span><br><span class="line">            //为字符输入流添加缓冲</span><br><span class="line">            BufferedReader br = new BufferedReader(isr);</span><br><span class="line">            String data = br.readLine();//读取数据</span><br><span class="line">            <span class="keyword">while</span> (data!=null)&#123;</span><br><span class="line">                System.out.println(data);</span><br><span class="line">                data = br.readLine();</span><br><span class="line">            &#125;</span><br><span class="line">            br.close();</span><br><span class="line">            isr.close();</span><br><span class="line">            is.close();</span><br><span class="line">        &#125; catch (MalformedURLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
       
@@ -331,13 +335,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/01/18/JavaIO流RandomAccessFile/">JavaIO流RandomAccessFile</a></p>
+        <p><span>本文标题:</span><a href="/2018/01/23/JavaSocket应用/">JavaSocket应用</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 待你如初见 的个人博客">待你如初见</a></p>
-        <p><span>发布时间:</span>2018年01月18日 - 14时23分</p>
-        <p><span>最后更新:</span>2018年01月18日 - 18时49分</p>
+        <p><span>发布时间:</span>2018年01月23日 - 22时50分</p>
+        <p><span>最后更新:</span>2018年01月24日 - 12时22分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/01/18/JavaIO流RandomAccessFile/" title="JavaIO流RandomAccessFile">http://win5.top/2018/01/18/JavaIO流RandomAccessFile/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://win5.top/2018/01/18/JavaIO流RandomAccessFile/　　作者: 待你如初见" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/01/23/JavaSocket应用/" title="JavaSocket应用">http://win5.top/2018/01/23/JavaSocket应用/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://win5.top/2018/01/23/JavaSocket应用/　　作者: 待你如初见" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -350,18 +354,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/01/18/JavaIO流输入输出流-字节流/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          JavaIO流输入输出流-字节流
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/01/17/JavaIO流File类/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaIO流File类</div>
+    <a href="/2018/01/21/Java反射Class类与类动态载/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java反射Class类与类动态载</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -372,7 +367,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#RandomAccessFile"><span class="toc-number">1.</span> <span class="toc-text">RandomAccessFile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java的文件模型"><span class="toc-number">2.</span> <span class="toc-text">java的文件模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打开文件"><span class="toc-number">3.</span> <span class="toc-text">打开文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写方法："><span class="toc-number">4.</span> <span class="toc-text">写方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#读方法："><span class="toc-number">5.</span> <span class="toc-text">读方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意关闭流"><span class="toc-number">6.</span> <span class="toc-text">注意关闭流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用操作"><span class="toc-number">7.</span> <span class="toc-text">常用操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code"><span class="toc-number">8.</span> <span class="toc-text">Code</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#InetAdress类"><span class="toc-number">1.</span> <span class="toc-text">InetAdress类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URL的应用"><span class="toc-number">2.</span> <span class="toc-text">URL的应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用URL读取页面内容"><span class="toc-number">3.</span> <span class="toc-text">使用URL读取页面内容</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -438,13 +433,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/01/18/JavaIO流输入输出流-字节流/" title="上一篇: JavaIO流输入输出流-字节流">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2018/01/17/JavaIO流File类/" title="下一篇: JavaIO流File类">
+            <a href="/2018/01/21/Java反射Class类与类动态载/" title="下一篇: Java反射Class类与类动态载">
                 <i class="fa fa-angle-right"></i>
             </a>
         
