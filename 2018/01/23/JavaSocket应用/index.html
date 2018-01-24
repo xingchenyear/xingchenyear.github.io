@@ -5,17 +5,19 @@
   
   <title>JavaSocket应用 | 待你如初见</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="InetAdress类 InetAdress类：没有构造方法，不能new一个对象InetAddress类用于标示网络上的硬件资源，表示互联网协议（IP)地址获取本机的InetAddress实例  12345678910111213141516public static void main(String[] args) throws UnknownHostException &amp;#123;">
+  <meta name="description" content="InetAdress类 InetAdress类：没有构造方法，不能new一个对象InetAddress类用于标示网络上的硬件资源，表示互联网协议（IP)地址获取本机的InetAddress实例">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaSocket应用">
 <meta property="og:url" content="http://win5.top/2018/01/23/JavaSocket应用/index.html">
 <meta property="og:site_name" content="待你如初见">
-<meta property="og:description" content="InetAdress类 InetAdress类：没有构造方法，不能new一个对象InetAddress类用于标示网络上的硬件资源，表示互联网协议（IP)地址获取本机的InetAddress实例  12345678910111213141516public static void main(String[] args) throws UnknownHostException &amp;#123;">
+<meta property="og:description" content="InetAdress类 InetAdress类：没有构造方法，不能new一个对象InetAddress类用于标示网络上的硬件资源，表示互联网协议（IP)地址获取本机的InetAddress实例">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-24T04:22:30.501Z">
+<meta property="og:image" content="http://win5.top/2018/01/23/JavaSocket应用/img/Socket01.png">
+<meta property="og:updated_time" content="2018-01-24T08:14:56.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaSocket应用">
-<meta name="twitter:description" content="InetAdress类 InetAdress类：没有构造方法，不能new一个对象InetAddress类用于标示网络上的硬件资源，表示互联网协议（IP)地址获取本机的InetAddress实例  12345678910111213141516public static void main(String[] args) throws UnknownHostException &amp;#123;">
+<meta name="twitter:description" content="InetAdress类 InetAdress类：没有构造方法，不能new一个对象InetAddress类用于标示网络上的硬件资源，表示互联网协议（IP)地址获取本机的InetAddress实例">
+<meta name="twitter:image" content="http://win5.top/2018/01/23/JavaSocket应用/img/Socket01.png">
   
     <link rel="alternative" href="/atom.xml" title="待你如初见" type="application/atom+xml">
   
@@ -270,6 +272,7 @@
         <h2 id="InetAdress类"><a href="#InetAdress类" class="headerlink" title="InetAdress类"></a>InetAdress类</h2><blockquote>
 <p>InetAdress类：没有构造方法，不能new一个对象<br>InetAddress类用于标示网络上的硬件资源，表示互联网协议（IP)地址<br>获取本机的InetAddress实例</p>
 </blockquote>
+<a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) throws UnknownHostException &#123;</span><br><span class="line"></span><br><span class="line">        InetAddress ia = InetAddress.getLocalHost();</span><br><span class="line">        System.out.println(<span class="string">"本机地址"</span>+ia.getHostAddress());</span><br><span class="line">        System.out.println(<span class="string">"本机名"</span>+ia.getHostName());</span><br><span class="line">        System.out.println(ia.getCanonicalHostName());</span><br><span class="line">        byte[] ads = ia.getAddress();</span><br><span class="line">        System.out.println(<span class="string">"本机IP"</span>+ Arrays.toString(ads));</span><br><span class="line">        System.out.println(ia);</span><br><span class="line"></span><br><span class="line">        //InetAddress ia1 = InetAddress.getByName(<span class="string">"2013-20161213BF"</span>);</span><br><span class="line">        InetAddress ia1 = InetAddress.getByName(<span class="string">"192.168.1.139"</span>);</span><br><span class="line">        System.out.println(<span class="string">"本机地址"</span>+ia1.getHostAddress());</span><br><span class="line">        System.out.println(<span class="string">"本机名"</span>+ia1.getHostName());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <h2 id="URL的应用"><a href="#URL的应用" class="headerlink" title="URL的应用"></a>URL的应用</h2><blockquote>
 <ol>
@@ -280,6 +283,15 @@
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            //创建实例</span><br><span class="line">            URL imooc = new URL(<span class="string">"Http://www.imooc.com"</span>);</span><br><span class="line">            //?表示传递的参数 <span class="comment">#后面表示锚点</span></span><br><span class="line">            URL url = new URL(imooc,<span class="string">"/index.html?username=tom#test"</span>);</span><br><span class="line">            System.out.println(<span class="string">"协议"</span>+url.getProtocol());</span><br><span class="line">            System.out.println(<span class="string">"主机地址"</span>+url.getHost());</span><br><span class="line">            //如果未指定端口号，则使用默认端口号，此时getPost()方法返回值为-1</span><br><span class="line">            System.out.println(<span class="string">"端口"</span>+url.getPort());</span><br><span class="line">            System.out.println(<span class="string">"文件路径"</span>+url.getPath());</span><br><span class="line">            System.out.println(<span class="string">"文件名"</span>+url.getFile());</span><br><span class="line">            System.out.println(<span class="string">"相对路径"</span>+url.getRef());</span><br><span class="line">            System.out.println(<span class="string">"传入字符串"</span>+url.getQuery());</span><br><span class="line">        &#125; catch (MalformedURLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <h2 id="使用URL读取页面内容"><a href="#使用URL读取页面内容" class="headerlink" title="使用URL读取页面内容"></a>使用URL读取页面内容</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            //创建实例</span><br><span class="line">            URL imooc = new URL(<span class="string">"Http://www.baidu.com"</span>);</span><br><span class="line">            //通过URL来获取输入流</span><br><span class="line">            InputStream is = imooc.openStream();</span><br><span class="line">            //把字节输入流转化为字符输入流，制定字符编码</span><br><span class="line">            InputStreamReader isr = new InputStreamReader(is,<span class="string">"utf-8"</span>);</span><br><span class="line">            //为字符输入流添加缓冲</span><br><span class="line">            BufferedReader br = new BufferedReader(isr);</span><br><span class="line">            String data = br.readLine();//读取数据</span><br><span class="line">            <span class="keyword">while</span> (data!=null)&#123;</span><br><span class="line">                System.out.println(data);</span><br><span class="line">                data = br.readLine();</span><br><span class="line">            &#125;</span><br><span class="line">            br.close();</span><br><span class="line">            isr.close();</span><br><span class="line">            is.close();</span><br><span class="line">        &#125; catch (MalformedURLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Socket通信模型"><a href="#Socket通信模型" class="headerlink" title="Socket通信模型"></a>Socket通信模型</h2><p><img src="img/Socket01.png" alt=""></p>
+<h2 id="Socket通信实现"><a href="#Socket通信实现" class="headerlink" title="Socket通信实现"></a>Socket通信实现</h2><blockquote>
+<ol>
+<li>创建ServerSocket和Socket</li>
+<li>打开链接到Socket的输入/输出流</li>
+<li>按照协议对Socket进行读写操作</li>
+<li>关闭输入输出流、关闭Socket</li>
+</ol>
+</blockquote>
 
       
       
@@ -338,7 +350,7 @@
         <p><span>本文标题:</span><a href="/2018/01/23/JavaSocket应用/">JavaSocket应用</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 待你如初见 的个人博客">待你如初见</a></p>
         <p><span>发布时间:</span>2018年01月23日 - 22时50分</p>
-        <p><span>最后更新:</span>2018年01月24日 - 12时22分</p>
+        <p><span>最后更新:</span>2018年01月24日 - 16时14分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/01/23/JavaSocket应用/" title="JavaSocket应用">http://win5.top/2018/01/23/JavaSocket应用/</a>
             <span class="copy-path" data-clipboard-text="原文: http://win5.top/2018/01/23/JavaSocket应用/　　作者: 待你如初见" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -367,7 +379,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#InetAdress类"><span class="toc-number">1.</span> <span class="toc-text">InetAdress类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URL的应用"><span class="toc-number">2.</span> <span class="toc-text">URL的应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用URL读取页面内容"><span class="toc-number">3.</span> <span class="toc-text">使用URL读取页面内容</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#InetAdress类"><span class="toc-number">1.</span> <span class="toc-text">InetAdress类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URL的应用"><span class="toc-number">2.</span> <span class="toc-text">URL的应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用URL读取页面内容"><span class="toc-number">3.</span> <span class="toc-text">使用URL读取页面内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Socket通信模型"><span class="toc-number">4.</span> <span class="toc-text">Socket通信模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Socket通信实现"><span class="toc-number">5.</span> <span class="toc-text">Socket通信实现</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
