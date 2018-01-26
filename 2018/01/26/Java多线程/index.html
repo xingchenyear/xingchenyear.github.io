@@ -5,18 +5,18 @@
   
   <title>Java多线程  | 待你如初见</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java多线程基础概念 程序是指令、数据及其组织形式的描述，进程是程序的实体。进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源进程和线程的关系：一对多，同一进程可以拥有多个线程线程之间的关系（交互）：互斥、同步  线程的实现方法 1、继承java.lang包">
+  <meta name="description" content="Java多线程基础概念 程序是指令、数据及其组织形式的描述，进程是程序的实体。进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源进程和线程的关系：一对多，同一进程可以拥有多个线程线程之间的关系（交互）：互斥、同步">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java多线程 ">
 <meta property="og:url" content="http://win5.top/2018/01/26/Java多线程/index.html">
 <meta property="og:site_name" content="待你如初见">
-<meta property="og:description" content="Java多线程基础概念 程序是指令、数据及其组织形式的描述，进程是程序的实体。进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源进程和线程的关系：一对多，同一进程可以拥有多个线程线程之间的关系（交互）：互斥、同步  线程的实现方法 1、继承java.lang包">
+<meta property="og:description" content="Java多线程基础概念 程序是指令、数据及其组织形式的描述，进程是程序的实体。进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源进程和线程的关系：一对多，同一进程可以拥有多个线程线程之间的关系（交互）：互斥、同步">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://vking.top/img/Thread01.jpg">
-<meta property="og:updated_time" content="2018-01-26T09:36:45.730Z">
+<meta property="og:updated_time" content="2018-01-26T09:43:48.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java多线程 ">
-<meta name="twitter:description" content="Java多线程基础概念 程序是指令、数据及其组织形式的描述，进程是程序的实体。进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源进程和线程的关系：一对多，同一进程可以拥有多个线程线程之间的关系（交互）：互斥、同步  线程的实现方法 1、继承java.lang包">
+<meta name="twitter:description" content="Java多线程基础概念 程序是指令、数据及其组织形式的描述，进程是程序的实体。进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源进程和线程的关系：一对多，同一进程可以拥有多个线程线程之间的关系（交互）：互斥、同步">
 <meta name="twitter:image" content="https://vking.top/img/Thread01.jpg">
   
     <link rel="alternative" href="/atom.xml" title="待你如初见" type="application/atom+xml">
@@ -272,6 +272,7 @@
         <h2 id="Java多线程基础概念"><a href="#Java多线程基础概念" class="headerlink" title="Java多线程基础概念"></a>Java多线程基础概念</h2><blockquote>
 <p>程序是指令、数据及其组织形式的描述，进程是程序的实体。<br>进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。<br>线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源<br>进程和线程的关系：一对多，同一进程可以拥有多个线程<br>线程之间的关系（交互）：互斥、同步</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="线程的实现方法"><a href="#线程的实现方法" class="headerlink" title="线程的实现方法"></a>线程的实现方法</h2><blockquote>
 <p>1、继承java.lang包下的Thread类，覆写Thread的run()方法<br>2、实现java.lang.Runnable接口，同样在run()方法中实现运行在线程上的代码</p>
 </blockquote>
@@ -346,7 +347,7 @@
         <p><span>本文标题:</span><a href="/2018/01/26/Java多线程/">Java多线程 </a></p>
         <p><span>文章作者:</span><a href="/" title="访问 待你如初见 的个人博客">待你如初见</a></p>
         <p><span>发布时间:</span>2018年01月26日 - 11时46分</p>
-        <p><span>最后更新:</span>2018年01月26日 - 17时36分</p>
+        <p><span>最后更新:</span>2018年01月26日 - 17时43分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/01/26/Java多线程/" title="Java多线程 ">http://win5.top/2018/01/26/Java多线程/</a>
             <span class="copy-path" data-clipboard-text="原文: http://win5.top/2018/01/26/Java多线程/　　作者: 待你如初见" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
