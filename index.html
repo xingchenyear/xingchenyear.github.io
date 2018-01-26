@@ -237,6 +237,138 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Java多线程" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/01/26/Java多线程/" class="article-date">
+      <time datetime="2018-01-26T03:46:46.000Z" itemprop="datePublished">2018-01-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/26/Java多线程/">Java多线程 </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Java多线程基础概念"><a href="#Java多线程基础概念" class="headerlink" title="Java多线程基础概念"></a>Java多线程基础概念</h2><blockquote>
+<p>程序是指令、数据及其组织形式的描述，进程是程序的实体。<br>进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。<br>线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源<br>进程和线程的关系：一对多，同一进程可以拥有多个线程<br>线程之间的关系（交互）：互斥、同步</p>
+</blockquote>
+<h2 id="线程的实现方法"><a href="#线程的实现方法" class="headerlink" title="线程的实现方法"></a>线程的实现方法</h2><blockquote>
+<p>1、继承java.lang包下的Thread类，覆写Thread的run()方法<br>2、实现java.lang.Runnable接口，同样在run()方法中实现运行在线程上的代码</p>
+</blockquote>
+<p><img src="https://vking.top/img/Thread01.jpg" alt=""></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 线程1</span><br><span class="line"> */</span><br><span class="line">public class ArmyRunnable implements Runnable &#123;</span><br><span class="line"></span><br><span class="line">    //volatile 保证了可以正确读取其他线程写入的值</span><br><span class="line">    //因为可见性的问题可能无法正确读到值可见性 jef JMM</span><br><span class="line">    volatile boolean keepRunning = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (keepRunning)&#123;</span><br><span class="line">            <span class="keyword">for</span> (int i = 0; i &lt; 5 ; i++) &#123;</span><br><span class="line">                System.out.println(Thread.currentThread().getName()+<span class="string">"当前执行["</span>+i+<span class="string">"]"</span>);</span><br><span class="line">                //让出处理器时间，下次调用不一定会调用哪个</span><br><span class="line"></span><br><span class="line">                Thread.yield();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()+<span class="string">"执行结束"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 第二个线程</span><br><span class="line"> */</span><br><span class="line">public class PersonThread extends Thread&#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()+<span class="string">"03线程开始了"</span>);</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName()+<span class="string">"03线程正在执行"</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(Thread.currentThread().getName()+<span class="string">"03线程结束了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">
+/**
+ * RUNING
+ */
+public class Stage extends Thread{
+
+    @Override
+    public void <span class="function"><span class="title">run</span></span>() {
+
+        System.out.println(<span class="string">"Ready Go!!!"</span>);
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        ArmyRunnable armyRunnable1 = new ArmyRunnable();
+        ArmyRunnable armyRunnable2 = new ArmyRunnable();
+
+        Thread thread1 = new Thread(armyRunnable1,<span class="string">"线程一"</span>);
+        Thread thread2 = new Thread(armyRunnable2,<span class="string">"线程2"</span>);
+
+        //启动线程
+        thread1.start();
+        thread2.start();
+
+        //当前本线程休眠
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //线程03开始执行
+        System.out.println(<span class="string">"03线程开始执行"</span>);
+
+        Thread sanCheng = new PersonThread();
+        sanCheng.setName(<span class="string">"03线程"</span>);
+        System.out.println(<span class="string">"03线程运行中"</span>);
+
+
+        armyRunnable1.keepRunning = <span class="literal">false</span>;
+        armyRunnable2.keepRunning = <span class="literal">false</span>;
+
+        try {
+            thread2.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        sanCheng.start();
+
+        try {
+            sanCheng.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(<span class="string">"运行结束"</span>);
+
+    }
+
+    public static void main(String[] args) {
+        new Stage().start();
+    }
+}
+</code></pre>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-JavaSocket应用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

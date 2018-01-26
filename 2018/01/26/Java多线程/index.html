@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>对象序列化与反序列化 | 待你如初见</title>
+  <title>Java多线程  | 待你如初见</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="对象的序列化，反序列化 对象序列化，就是将Object转换成byte序列，反之叫对象的反序列化  序列化流(ObjectOutputStream),是过滤流—-writeObject反序列化流(ObjectInputStream)—readObject 序列化接口(Serializable)对象必须实现序列化接口 ，才能进行序列化，否则将出现异常这个接口，没有任何方法，只是一个标准">
+  <meta name="description" content="Java多线程基础概念 程序是指令、数据及其组织形式的描述，进程是程序的实体。进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源进程和线程的关系：一对多，同一进程可以拥有多个线程线程之间的关系（交互）：互斥、同步  线程的实现方法 1、继承java.lang包">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对象序列化与反序列化">
-<meta property="og:url" content="http://win5.top/2018/01/20/对象序列化与反序列化/index.html">
+<meta property="og:title" content="Java多线程 ">
+<meta property="og:url" content="http://win5.top/2018/01/26/Java多线程/index.html">
 <meta property="og:site_name" content="待你如初见">
-<meta property="og:description" content="对象的序列化，反序列化 对象序列化，就是将Object转换成byte序列，反之叫对象的反序列化  序列化流(ObjectOutputStream),是过滤流—-writeObject反序列化流(ObjectInputStream)—readObject 序列化接口(Serializable)对象必须实现序列化接口 ，才能进行序列化，否则将出现异常这个接口，没有任何方法，只是一个标准">
+<meta property="og:description" content="Java多线程基础概念 程序是指令、数据及其组织形式的描述，进程是程序的实体。进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源进程和线程的关系：一对多，同一进程可以拥有多个线程线程之间的关系（交互）：互斥、同步  线程的实现方法 1、继承java.lang包">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-20T09:45:09.941Z">
+<meta property="og:image" content="https://vking.top/img/Thread01.jpg">
+<meta property="og:updated_time" content="2018-01-26T07:53:19.842Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对象序列化与反序列化">
-<meta name="twitter:description" content="对象的序列化，反序列化 对象序列化，就是将Object转换成byte序列，反之叫对象的反序列化  序列化流(ObjectOutputStream),是过滤流—-writeObject反序列化流(ObjectInputStream)—readObject 序列化接口(Serializable)对象必须实现序列化接口 ，才能进行序列化，否则将出现异常这个接口，没有任何方法，只是一个标准">
+<meta name="twitter:title" content="Java多线程 ">
+<meta name="twitter:description" content="Java多线程基础概念 程序是指令、数据及其组织形式的描述，进程是程序的实体。进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源进程和线程的关系：一对多，同一进程可以拥有多个线程线程之间的关系（交互）：互斥、同步  线程的实现方法 1、继承java.lang包">
+<meta name="twitter:image" content="https://vking.top/img/Thread01.jpg">
   
     <link rel="alternative" href="/atom.xml" title="待你如初见" type="application/atom+xml">
   
@@ -233,11 +235,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-对象序列化与反序列化" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Java多线程" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/01/20/对象序列化与反序列化/" class="article-date">
-      <time datetime="2018-01-20T08:58:02.000Z" itemprop="datePublished">2018-01-20</time>
+      <a href="/2018/01/26/Java多线程/" class="article-date">
+      <time datetime="2018-01-26T03:46:46.000Z" itemprop="datePublished">2018-01-26</time>
 </a>
     </div>
   
@@ -250,7 +252,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      对象序列化与反序列化
+      Java多线程 
     </h1>
   
 
@@ -267,21 +269,84 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="对象的序列化，反序列化"><a href="#对象的序列化，反序列化" class="headerlink" title="对象的序列化，反序列化"></a>对象的序列化，反序列化</h2><ol>
-<li>对象序列化，就是将Object转换成byte序列，反之叫对象的反序列化 </li>
-<li>序列化流(ObjectOutputStream),是过滤流—-writeObject<br>反序列化流(ObjectInputStream)—readObject</li>
-<li>序列化接口(Serializable)<br>对象必须实现序列化接口 ，才能进行序列化，否则将出现异常<br>这个接口，没有任何方法，只是一个标准<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) throws Exception&#123;</span><br><span class="line">		String file = <span class="string">"demo/obj.dat"</span>;</span><br><span class="line">		//1.对象的序列化</span><br><span class="line">		/*ObjectOutputStream oos = new ObjectOutputStream(</span><br><span class="line">				new FileOutputStream(file));</span><br><span class="line">		Student stu = new Student(<span class="string">"10001"</span>, <span class="string">"张三"</span>, 20);</span><br><span class="line">		oos.writeObject(stu);</span><br><span class="line">		oos.flush();</span><br><span class="line">		oos.close();*/</span><br><span class="line">		//2.对象反序列化</span><br><span class="line">		ObjectInputStream ois = new ObjectInputStream(</span><br><span class="line">				new FileInputStream(file));</span><br><span class="line">		Student stu = (Student)ois.readObject();</span><br><span class="line">		System.out.println(stu);</span><br><span class="line">		ois.close();</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="transient关键字"><a href="#transient关键字" class="headerlink" title="transient关键字"></a>transient关键字</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//手动序列化</span><br><span class="line">  private void writeObject(java.io.ObjectOutputStream s)</span><br><span class="line">	        throws java.io.IOException</span><br><span class="line">//手动反序列化</span><br><span class="line">  private void readObject(java.io.ObjectInputStream s)</span><br><span class="line">	        throws java.io.IOException, ClassNotFoundException		        </span><br><span class="line">  //分析ArrayList源码中序列化和反序列化的问题</span><br></pre></td></tr></table></figure>
-<h3 id="序列化中-子类和父类构造函数的调用问题"><a href="#序列化中-子类和父类构造函数的调用问题" class="headerlink" title="序列化中 子类和父类构造函数的调用问题"></a>序列化中 子类和父类构造函数的调用问题</h3><p>可以提高性能有效数据进行序列化无效不序列化</p>
-<h3 id="序列化中-子类和父类构造函数的调用问题-1"><a href="#序列化中-子类和父类构造函数的调用问题-1" class="headerlink" title="序列化中 子类和父类构造函数的调用问题"></a>序列化中 子类和父类构造函数的调用问题</h3><ul>
-<li>对子类对象进行反序列化操作时，</li>
-<li>如果其父类没有实现序列化接口</li>
-<li>那么其父类的构造函数会被调用</li>
-<li>一个类实现了序列化接口，那么其子类都可以进行序列化</li>
-</ul>
+        <h2 id="Java多线程基础概念"><a href="#Java多线程基础概念" class="headerlink" title="Java多线程基础概念"></a>Java多线程基础概念</h2><blockquote>
+<p>程序是指令、数据及其组织形式的描述，进程是程序的实体。<br>进程：程序（任务）的执行过程，具有动态性；持有资源（共享内存，共享文件）和线程，是系统进行资源分配和调度的基本单位。<br>线程：有时被称为轻量级进程，是程序执行流的最小单元，线程共享进程的所有资源<br>进程和线程的关系：一对多，同一进程可以拥有多个线程<br>线程之间的关系（交互）：互斥、同步</p>
+</blockquote>
+<h2 id="线程的实现方法"><a href="#线程的实现方法" class="headerlink" title="线程的实现方法"></a>线程的实现方法</h2><blockquote>
+<p>1、继承java.lang包下的Thread类，覆写Thread的run()方法<br>2、实现java.lang.Runnable接口，同样在run()方法中实现运行在线程上的代码</p>
+</blockquote>
+<p><img src="https://vking.top/img/Thread01.jpg" alt=""></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 线程1</span><br><span class="line"> */</span><br><span class="line">public class ArmyRunnable implements Runnable &#123;</span><br><span class="line"></span><br><span class="line">    //volatile 保证了可以正确读取其他线程写入的值</span><br><span class="line">    //因为可见性的问题可能无法正确读到值可见性 jef JMM</span><br><span class="line">    volatile boolean keepRunning = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (keepRunning)&#123;</span><br><span class="line">            <span class="keyword">for</span> (int i = 0; i &lt; 5 ; i++) &#123;</span><br><span class="line">                System.out.println(Thread.currentThread().getName()+<span class="string">"当前执行["</span>+i+<span class="string">"]"</span>);</span><br><span class="line">                //让出处理器时间，下次调用不一定会调用哪个</span><br><span class="line"></span><br><span class="line">                Thread.yield();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()+<span class="string">"执行结束"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 第二个线程</span><br><span class="line"> */</span><br><span class="line">public class PersonThread extends Thread&#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()+<span class="string">"03线程开始了"</span>);</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName()+<span class="string">"03线程正在执行"</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(Thread.currentThread().getName()+<span class="string">"03线程结束了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">
+/**
+ * RUNING
+ */
+public class Stage extends Thread{
+
+    @Override
+    public void <span class="function"><span class="title">run</span></span>() {
+
+        System.out.println(<span class="string">"Ready Go!!!"</span>);
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        ArmyRunnable armyRunnable1 = new ArmyRunnable();
+        ArmyRunnable armyRunnable2 = new ArmyRunnable();
+
+        Thread thread1 = new Thread(armyRunnable1,<span class="string">"线程一"</span>);
+        Thread thread2 = new Thread(armyRunnable2,<span class="string">"线程2"</span>);
+
+        //启动线程
+        thread1.start();
+        thread2.start();
+
+        //当前本线程休眠
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //线程03开始执行
+        System.out.println(<span class="string">"03线程开始执行"</span>);
+
+        Thread sanCheng = new PersonThread();
+        sanCheng.setName(<span class="string">"03线程"</span>);
+        System.out.println(<span class="string">"03线程运行中"</span>);
+
+
+        armyRunnable1.keepRunning = <span class="literal">false</span>;
+        armyRunnable2.keepRunning = <span class="literal">false</span>;
+
+        try {
+            thread2.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        sanCheng.start();
+
+        try {
+            sanCheng.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(<span class="string">"运行结束"</span>);
+
+    }
+
+    public static void main(String[] args) {
+        new Stage().start();
+    }
+}
+</code></pre>
 
       
       
@@ -337,13 +402,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/01/20/对象序列化与反序列化/">对象序列化与反序列化</a></p>
+        <p><span>本文标题:</span><a href="/2018/01/26/Java多线程/">Java多线程 </a></p>
         <p><span>文章作者:</span><a href="/" title="访问 待你如初见 的个人博客">待你如初见</a></p>
-        <p><span>发布时间:</span>2018年01月20日 - 16时58分</p>
-        <p><span>最后更新:</span>2018年01月20日 - 17时45分</p>
+        <p><span>发布时间:</span>2018年01月26日 - 11时46分</p>
+        <p><span>最后更新:</span>2018年01月26日 - 15时53分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/01/20/对象序列化与反序列化/" title="对象序列化与反序列化">http://win5.top/2018/01/20/对象序列化与反序列化/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://win5.top/2018/01/20/对象序列化与反序列化/　　作者: 待你如初见" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/01/26/Java多线程/" title="Java多线程 ">http://win5.top/2018/01/26/Java多线程/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://win5.top/2018/01/26/Java多线程/　　作者: 待你如初见" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -356,18 +421,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/01/20/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/01/19/JavaIO流输入输出流-字符流/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaIO流输入输出流-字符流</div>
+    <a href="/2018/01/23/JavaSocket应用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaSocket应用</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -378,7 +434,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#对象的序列化，反序列化"><span class="toc-number">1.</span> <span class="toc-text">对象的序列化，反序列化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#transient关键字"><span class="toc-number">2.</span> <span class="toc-text">transient关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#序列化中-子类和父类构造函数的调用问题"><span class="toc-number">2.1.</span> <span class="toc-text">序列化中 子类和父类构造函数的调用问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#序列化中-子类和父类构造函数的调用问题-1"><span class="toc-number">2.2.</span> <span class="toc-text">序列化中 子类和父类构造函数的调用问题</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java多线程基础概念"><span class="toc-number">1.</span> <span class="toc-text">Java多线程基础概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程的实现方法"><span class="toc-number">2.</span> <span class="toc-text">线程的实现方法</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -444,13 +500,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/01/20/hello-world/" title="上一篇: Hello World">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2018/01/19/JavaIO流输入输出流-字符流/" title="下一篇: JavaIO流输入输出流-字符流">
+            <a href="/2018/01/23/JavaSocket应用/" title="下一篇: JavaSocket应用">
                 <i class="fa fa-angle-right"></i>
             </a>
         
