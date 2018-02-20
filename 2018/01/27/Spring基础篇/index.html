@@ -13,7 +13,7 @@
 <meta property="og:description" content="Spring相关资料 Spring 学习资料http://spring.io/  官网首页http://projects.spring.io/spring-framework/   aop ico文档">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://vking.top/img/Spring01.png">
-<meta property="og:updated_time" content="2018-02-04T03:08:15.032Z">
+<meta property="og:updated_time" content="2018-02-20T08:43:12.717Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring基础篇">
 <meta name="twitter:description" content="Spring相关资料 Spring 学习资料http://spring.io/  官网首页http://projects.spring.io/spring-framework/   aop ico文档">
@@ -306,6 +306,55 @@
 <li>右键选择要执行的单元测试方法执行或者执行一个类的全部单元测试方法</li>
 </ul>
 </blockquote>
+<h2 id="Bean容器的初始化"><a href="#Bean容器的初始化" class="headerlink" title="Bean容器的初始化"></a>Bean容器的初始化</h2><ul>
+<li><p>基础:两个包</p>
+<ul>
+<li>org.springframework.beans</li>
+<li>org.springframework.context</li>
+<li>BeanFactory提供配置结构和基本功能，加载并初始化Bean</li>
+<li>ApplicationContext保存了Bean对象并在Spring中广泛使用</li>
+</ul>
+</li>
+<li>方式：ApplicationContext<ul>
+<li>本地文件</li>
+<li>Classpath</li>
+<li>Web应用中以来servlet或Listener</li>
+</ul>
+</li>
+</ul>
+<h2 id="Spring的注入"><a href="#Spring的注入" class="headerlink" title="Spring的注入"></a>Spring的注入</h2><ul>
+<li>Spring注入指在启动Spring容器加载bean配置的时候，完成对变量的赋值行为</li>
+<li><p>常用的两种注入方式</p>
+<ul>
+<li>设值注入</li>
+<li>构造注入      <h2 id="Bean容器的初始化-1"><a href="#Bean容器的初始化-1" class="headerlink" title="Bean容器的初始化"></a>Bean容器的初始化</h2></li>
+</ul>
+</li>
+<li><p>基础:两个包</p>
+<ul>
+<li>org.springframework.beans</li>
+<li>org.springframework.context</li>
+<li>BeanFactory提供配置结构和基本功能，加载并初始化Bean</li>
+<li>ApplicationContext保存了Bean对象并在Spring中广泛使用</li>
+</ul>
+</li>
+<li>方式：ApplicationContext<ul>
+<li>本地文件</li>
+<li>Classpath</li>
+<li>Web应用中以来servlet或Listener</li>
+</ul>
+</li>
+</ul>
+<h2 id="Spring的注入-1"><a href="#Spring的注入-1" class="headerlink" title="Spring的注入"></a>Spring的注入</h2><ul>
+<li>Spring注入指在启动Spring容器加载bean配置的时候，完成对变量的赋值行为</li>
+<li>常用的两种注入方式<ul>
+<li>设值注入</li>
+<li>构造注入</li>
+</ul>
+</li>
+</ul>
+<h3 id="设置注入"><a href="#设置注入" class="headerlink" title="设置注入"></a>设置注入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">XML配置</span><br><span class="line"> &lt;bean id=<span class="string">"ispringService"</span> class=<span class="string">"com.DIDemo.service.springServiceImopl"</span>&gt;</span><br><span class="line">        &lt;property name=<span class="string">"ispringDao"</span> ref=<span class="string">"ispringDao"</span>&gt;&lt;/property&gt;</span><br><span class="line"> &lt;/bean&gt;</span><br><span class="line"> &lt;bean id=<span class="string">"ispringDao"</span> class=<span class="string">"com.DIDemo.dao.sptingDaoImpl"</span>&gt;&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="构造注入"><a href="#构造注入" class="headerlink" title="构造注入"></a>构造注入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=<span class="string">"injectionService"</span> class=<span class="string">"com.imooc.ioc.injection.service.InjectionServiceImpl"</span>&gt;</span><br><span class="line">        	&lt;constructor-arg name=<span class="string">"injectionDAO"</span> ref=<span class="string">"injectionDAO"</span>&gt;&lt;/constructor-arg&gt;</span><br><span class="line">        &lt;/bean&gt;</span><br><span class="line">        </span><br><span class="line">        &lt;bean id=<span class="string">"injectionDAO"</span> class=<span class="string">"com.imooc.ioc.injection.dao.InjectionDAOImpl"</span>&gt;&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
 
       
       
@@ -364,7 +413,7 @@
         <p><span>本文标题:</span><a href="/2018/01/27/Spring基础篇/">Spring基础篇</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 待你如初见 的个人博客">待你如初见</a></p>
         <p><span>发布时间:</span>2018年01月27日 - 10时53分</p>
-        <p><span>最后更新:</span>2018年02月04日 - 11时08分</p>
+        <p><span>最后更新:</span>2018年02月20日 - 16时43分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/01/27/Spring基础篇/" title="Spring基础篇">http://win5.top/2018/01/27/Spring基础篇/</a>
             <span class="copy-path" data-clipboard-text="原文: http://win5.top/2018/01/27/Spring基础篇/　　作者: 待你如初见" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -402,7 +451,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring相关资料"><span class="toc-number">1.</span> <span class="toc-text">Spring相关资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring是什么"><span class="toc-number">2.</span> <span class="toc-text">Spring是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Framework-Runtime"><span class="toc-number">3.</span> <span class="toc-text">Framework Runtime</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是IOC"><span class="toc-number">4.</span> <span class="toc-text">什么是IOC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单元测试"><span class="toc-number">5.</span> <span class="toc-text">单元测试</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring相关资料"><span class="toc-number">1.</span> <span class="toc-text">Spring相关资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring是什么"><span class="toc-number">2.</span> <span class="toc-text">Spring是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Framework-Runtime"><span class="toc-number">3.</span> <span class="toc-text">Framework Runtime</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是IOC"><span class="toc-number">4.</span> <span class="toc-text">什么是IOC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单元测试"><span class="toc-number">5.</span> <span class="toc-text">单元测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bean容器的初始化"><span class="toc-number">6.</span> <span class="toc-text">Bean容器的初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring的注入"><span class="toc-number">7.</span> <span class="toc-text">Spring的注入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bean容器的初始化-1"><span class="toc-number">8.</span> <span class="toc-text">Bean容器的初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring的注入-1"><span class="toc-number">9.</span> <span class="toc-text">Spring的注入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#设置注入"><span class="toc-number">9.1.</span> <span class="toc-text">设置注入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构造注入"><span class="toc-number">9.2.</span> <span class="toc-text">构造注入</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
